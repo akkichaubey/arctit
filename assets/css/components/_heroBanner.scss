@@ -1,0 +1,111 @@
+.hero-banner {
+  overflow: hidden;
+  background: $black;
+  .slide{
+    height: 100vh;
+    padding: 194px 0 52px;
+    position: relative;
+    background: no-repeat center/ cover;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      opacity: 0.6;
+    }
+    @include breakpoint( max , 767){
+      padding: 118px 0 52px;
+    }
+  }
+  .banner-info{
+    padding: 114px 50px 260px 203px;
+    position: relative;
+    max-width: 1100px;
+    z-index: 1;
+    @include breakpoint( max , 1366){
+      max-width: 900px;
+      padding: 70px 50px 90px 90px;
+    }
+    @include breakpoint( max , 1280){
+      max-width: 900px;
+      padding: 70px 50px 90px 90px;
+    }
+    @include breakpoint( max , 1280){
+      padding: 50px 50px 50px 70px;
+    }
+    @include breakpoint( max , 767){
+      max-width: 100%;
+      padding: 41px 20px 24px;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-top: 554px solid #202020;
+      border-left: 0px solid transparent;
+      border-right: 362px solid transparent;
+      opacity: 0.8;
+      max-width: 890px;
+      @include breakpoint( max , 1366){
+        max-width: 720px;
+        border-top: 400px solid #202020;
+      }
+      @include breakpoint( max , 1280){
+        max-width: 570px;
+        border-right: 300px solid transparent;
+        border-top: 282px solid #202020;
+      }
+      @include breakpoint( max , 767){
+        border-top: 136px solid #202020;
+        border-left: 1px solid transparent;
+        border-bottom: 120px solid transparent;
+        border-right: calc(100vw - 30px) solid #202020;
+      }
+    }
+    .banner-title{
+      font-size: 90px;
+      line-height: 1.211;
+      letter-spacing: 5.4px;
+      color: $white;
+      position: relative;
+      text-transform: uppercase;
+      z-index: 1;
+      @include breakpoint( max , 1366){
+        font-size: 70px;
+      }
+      @include breakpoint( max , 1280){
+        font-size: 50px;
+      }
+      @include breakpoint( max , 767){
+        font-size: 40px;
+        letter-spacing: 2.4px;
+      }
+    }
+  }
+  .slider-wrap{
+    position: relative;
+    .arrows{
+      position: absolute;
+      bottom: 80px;
+      right: 78px;
+      z-index: 1;
+      margin: 0 -3px;
+      @include breakpoint( max , 767){
+        left: 0;
+        right: 0;
+        bottom: 88px;
+        padding: 0 20px;
+        justify-content: center;
+      }
+      > a{
+        margin: 0 3px;
+      }
+    }
+  }
+}
