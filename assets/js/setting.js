@@ -32,6 +32,7 @@ togglebtn.addEventListener('click', function() {
 var swiper = new Swiper(".hero-slider", {
   slidesPerView: 1,
   loop: true,
+  speed: 900,
   navigation: {
     nextEl: ".hero-next",
     prevEl: ".hero-prev",

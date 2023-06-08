@@ -1,26 +1,59 @@
 html {
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
-  scroll-behavior: auto !important;
+	scroll-behavior: auto !important;
+	scrollbar-color: $black $white;
+	scrollbar-width: thin;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
   &:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
   }
   &:before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+     scrollbar-width: thin;
   }
 }
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $black;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
 
 body {
   margin: 0;
@@ -32,6 +65,13 @@ body {
   font-weight: 400;
   background: $white;
   font-family: $primary-font;
+
+  min-height: 100%;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+	scrollbar-color: $black $white;
+	scrollbar-width: thin;
+	overflow-x: hidden;
 }
 
 a {

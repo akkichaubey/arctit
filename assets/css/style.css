@@ -1,25 +1,57 @@
 html {
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: 100%;
   height: 100%;
   scroll-behavior: auto !important;
+  scrollbar-color: #000 #fff;
+  scrollbar-width: thin;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
 }
 *:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
 }
 *:before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
 }
 
 body {
@@ -32,6 +64,12 @@ body {
   font-weight: 400;
   background: #fff;
   font-family: "Roboto", sans-serif;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  scrollbar-color: #000 #fff;
+  scrollbar-width: thin;
+  overflow-x: hidden;
 }
 
 a {
@@ -276,6 +314,8 @@ ol {
 .head-menu .container {
   max-width: 100%;
   padding: 0 50px;
+  height: 100%;
+  overflow: auto;
 }
 .head-menu .menu {
   position: relative;
@@ -372,27 +412,6 @@ ol {
   overflow: hidden;
   background: #000;
 }
-.hero-banner .slide {
-  height: 100vh;
-  padding: 194px 0 52px;
-  position: relative;
-  background: no-repeat center/cover;
-}
-.hero-banner .slide::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.6;
-}
-@media (max-width: 767px) {
-  .hero-banner .slide {
-    padding: 118px 0 52px;
-  }
-}
 .hero-banner .banner-info {
   padding: 114px 50px 260px 203px;
   position: relative;
@@ -464,6 +483,12 @@ ol {
   position: relative;
   text-transform: uppercase;
   z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1366px) {
   .hero-banner .banner-info .banner-title {
@@ -480,6 +505,32 @@ ol {
     font-size: 40px;
     letter-spacing: 2.4px;
   }
+}
+.hero-banner .slide {
+  height: 100vh;
+  padding: 194px 0 52px;
+  position: relative;
+  background: no-repeat center/cover;
+  min-height: 550px;
+}
+.hero-banner .slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .hero-banner .slide {
+    padding: 118px 0 52px;
+  }
+}
+.hero-banner .slide.swiper-slide-active .banner-info .banner-title {
+  transition-delay: 0.6s;
+  opacity: 1;
 }
 .hero-banner .slider-wrap {
   position: relative;
