@@ -187,10 +187,10 @@
     right: 0;
     bottom: 0;
     height: 0%;
-    background: #000;
+    background: $black;
   }
   &::before{
-    background: #333;
+    background: $dark;
   }
   &.active{
     &::after {

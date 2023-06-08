@@ -47,25 +47,25 @@
       left: 0;
       right: 0;
       width: 100%;
-      border-top: 554px solid #202020;
+      border-top: 554px solid $dark;
       border-left: 0px solid transparent;
       border-right: 362px solid transparent;
       opacity: 0.8;
       max-width: 890px;
       @include breakpoint( max , 1366){
         max-width: 720px;
-        border-top: 400px solid #202020;
+        border-top: 400px solid $dark;
       }
       @include breakpoint( max , 1280){
         max-width: 570px;
         border-right: 300px solid transparent;
-        border-top: 282px solid #202020;
+        border-top: 282px solid $dark;
       }
       @include breakpoint( max , 767){
-        border-top: 136px solid #202020;
+        border-top: 136px solid $dark;
         border-left: 1px solid transparent;
         border-bottom: 120px solid transparent;
-        border-right: calc(100vw - 30px) solid #202020;
+        border-right: calc(100vw - 30px) solid $dark;
       }
     }
     .banner-title{

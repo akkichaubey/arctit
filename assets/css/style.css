@@ -250,7 +250,7 @@ ol {
   background: #000;
 }
 .head-menu::before {
-  background: #333;
+  background: #202020;
 }
 .head-menu.active::after {
   animation: alideDown 0.6s forwards;
